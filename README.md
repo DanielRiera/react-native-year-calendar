@@ -14,6 +14,4 @@ or yarn
 Import and use
 
 ## ToDo
-Documentation
-Use Date class (Remove moment package)
-Events
+- Documentation
