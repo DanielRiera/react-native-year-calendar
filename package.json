@@ -1,0 +1,28 @@
+{
+    "name": "react-native-year-calendar",
+    "version": "1.0.0",
+    "description": "A year calendar component for React Native",
+    "main": "index.ts",
+    "scripts": {
+        "test": "echo \"Error: No test\" && exit 0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/DanielRiera/react-native-year-calendar.git"
+    },
+    "author": "Daniel Riera",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/DanielRiera/react-native-year-calendar/issues"
+    },
+    "homepage": "https://github.com/DanielRiera/react-native-year-calendar",
+    "dependencies": {
+        "moment": "*",
+        "react": "*",
+        "react-native": "*"
+    },
+    "devDependencies": {
+        "@types/react": "^18.0.25",
+        "@types/react-native": "^0.70.7"
+    }
+}
