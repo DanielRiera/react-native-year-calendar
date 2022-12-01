@@ -14,7 +14,10 @@ interface DayProps {
 
 const Day = (props: DayProps) => {
   return (
-    <TouchableOpacity onPress={props?.clickDay} style={styles.day}>
+    <TouchableOpacity onPress={() => { props?.clickDay ? props?.clickDay({
+      current: props.date,
+      events: props.events
+    }) : false}} style={styles.day}>
       <Text style={props?.styleText}>{props.date.getDate()}</Text>
       <CalendarEvent events={props.events} />
     </TouchableOpacity>

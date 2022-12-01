@@ -28,7 +28,7 @@ const Month = (props: MonthProps) => {
                   }
                   {
                     //events={props.events[dateInstance.getDay(day).format('YYYY-MM-DD')]}
-                      calculateDays.map((_day: any) => { return <Day date={new Date(props.year, props.month, _day)} events={props.events[formatDate(new Date(props.year, props.month, _day))]}  /> })
+                      calculateDays.map((_day: any) => { return <Day clickDay={props?.clickDay} date={new Date(props.year, props.month, _day)} events={props.events[formatDate(new Date(props.year, props.month, _day))]}  /> })
                   }
               </View>
           </View>
