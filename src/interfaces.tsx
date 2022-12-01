@@ -6,11 +6,11 @@ interface EventC {
     color: string,
     data: any,
     style?: StyleProp<ViewStyle>
-  }
+}
 
 interface MonthProps {
     year: number,
-    events?: EventC[],
+    events: any,
     month: number,
     style?: StyleProp<ViewStyle>,
     clickDay?: any

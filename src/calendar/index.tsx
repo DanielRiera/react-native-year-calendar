@@ -2,7 +2,6 @@
  * @Author: Daniel Riera
  * @Version: 1.0.0
  */
-  import moment from 'moment';
  import React from 'react';
  import { View, Text, StyleSheet, StyleProp, ViewStyle } from 'react-native';
  import Month from '../month';
@@ -25,16 +24,15 @@ interface CalendarProps {
 
 const Calendar = (props: CalendarProps) => {
     const {
-        year = moment().year(),
-        events = [],
+        year = new Date().getFullYear(),
+        events,
         months = [0,1,2,3,4,5,6,7,8,9,10,11],
         style = {},
         clickDay = false
     } = props;
-
+    console.log("Recibidos eventos", props.events)
     return (
         <View>
-            <Text>{ year }</Text>
             <View style={[styles.container, style]}>
               { months.map((month: number) => <Month year={year} month={month} clickDay={clickDay} events={events} />) }
             </View>
