@@ -1,24 +1,29 @@
 import * as React from 'react';
-import { Text, View, StyleSheet, StyleProp, ViewStyle } from 'react-native';
+import { Text, View, StyleSheet } from 'react-native';
+import { EventC } from '../interfaces';
 
 interface EventProps {
-    year: number,
-    events: Event[],
-    months: number[],
-    style?: StyleProp<ViewStyle>,
-    clickDay: any
+    events?: EventC[],
 }
 
 const Event = (props: EventProps) => {
   return (
-    <View style={styles.container}>
-      <Text>Event</Text>
-    </View>
+    props.events ?
+      props.events.map((ev) => {
+        return (<View style={[styles.event, ev?.style ]}></View>)
+      })
+    : false
   );
 };
 
 export default Event;
 
 const styles = StyleSheet.create({
-  container: {}
+  event: {
+    backgroundColor: 'red',
+    width: 4,
+    height: 4,
+    borderRadius: 100,
+    marginRight: 2
+  }
 });

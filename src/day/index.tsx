@@ -1,23 +1,19 @@
 import * as React from 'react';
-import { Text, View, StyleSheet, StyleProp, ViewStyle } from 'react-native';
-
-interface EventC {
-  id: number,
-  key: string,
-  color: string,
-  data: any
-}
+import { Text, View, StyleSheet, StyleProp, ViewStyle, Dimensions } from 'react-native';
+import { EventC } from '../interfaces';
+const { width } = Dimensions.get('screen');
 
 interface DayProps {
     events?: EventC[],
     style?: StyleProp<ViewStyle>,
-    clickDay?: any
+    clickDay?: any,
+    number: number
 }
 
 const Day = (props: DayProps) => {
   return (
-    <View style={styles.container}>
-      <Text>Day</Text>
+    <View style={styles.day}>
+      <Text>{props.number}</Text>
     </View>
   );
 };
@@ -25,5 +21,9 @@ const Day = (props: DayProps) => {
 export default Day;
 
 const styles = StyleSheet.create({
-  container: {}
+  day: {
+    width: width / 15,
+    padding:5,
+    alignItems:'center'
+  }
 });
