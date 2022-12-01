@@ -12,7 +12,7 @@ const Month = (props: MonthProps) => {
     const first_blocks = intToArray(first_day_jan);
     return (
           <View style={styles.month}>
-              <Text>{dateInstance.getMonth()}</Text>
+              <Text style={{fontWeight:'bold'}}>{dateInstance.toLocaleString('default', { month: 'long' })}</Text>
               <View style={styles.container}>
                       <Text style={styles.day}>L</Text>
                       <Text style={styles.day}>M</Text>
@@ -23,13 +23,8 @@ const Month = (props: MonthProps) => {
                       <Text style={styles.day}>D</Text>
               </View>
               <View style={styles.container}>
-                  {
-                      first_blocks.map(() => <View style={styles.day}></View>)
-                  }
-                  {
-                    //events={props.events[dateInstance.getDay(day).format('YYYY-MM-DD')]}
-                      calculateDays.map((_day: any) => { return <Day clickDay={props?.clickDay} date={new Date(props.year, props.month, _day)} events={props.events[formatDate(new Date(props.year, props.month, _day))]}  /> })
-                  }
+                  { first_blocks.map(() => <View style={styles.day}></View>) }
+                  { calculateDays.map((_day: any) => { return <Day clickDay={props?.clickDay} date={new Date(props.year, props.month, _day)} events={props.events[formatDate(new Date(props.year, props.month, _day))]}  /> }) }
               </View>
           </View>
     );
@@ -44,7 +39,7 @@ const styles = StyleSheet.create({
     alignItems: 'flex-start'
   },
   month: {
-    width: width / 2
+    width: '50%'
   },
   day: {
     width: width / 15,
