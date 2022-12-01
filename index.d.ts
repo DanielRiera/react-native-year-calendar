@@ -6,4 +6,4 @@ import React, { PureComponent } from 'react'
 export class Calendar extends PureComponent { }
 export class Month extends PureComponent { }
 export class Day extends PureComponent { }
-export class Event extends PureComponent { }
+export class CalendarEvent extends PureComponent { }

@@ -1,6 +1,6 @@
 {
     "name": "react-native-year-calendar",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "A year calendar component for React Native",
     "main": "index.ts",
     "scripts": {
@@ -17,7 +17,6 @@
     },
     "homepage": "https://github.com/DanielRiera/react-native-year-calendar",
     "dependencies": {
-        "moment": "*",
         "react": "*",
         "react-native": "*"
     },

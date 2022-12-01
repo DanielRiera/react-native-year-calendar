@@ -1,22 +1,25 @@
 import * as React from 'react';
-import { Text, View, StyleSheet } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 import { EventC } from '../interfaces';
 
 interface EventProps {
-    events?: EventC[],
+    events?: EventC[]
 }
 
-const Event = (props: EventProps) => {
+const CalendarEvent = (props: EventProps) => {
+  if(typeof props.events == 'undefined') {
+    return <></>;
+  }
   return (
-    props.events ?
-      props.events.map((ev) => {
-        return (<View style={[styles.event, ev?.style ]}></View>)
+    <View style={{flexDirection: 'row'}}>{
+      props?.events.map((ev) => {
+        return (<View style={[styles.event, ev?.style, {backgroundColor: ev?.color} ]}></View>)
       })
-    : false
+    }</View>
   );
 };
 
-export default Event;
+export default CalendarEvent;
 
 const styles = StyleSheet.create({
   event: {

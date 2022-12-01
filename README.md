@@ -56,6 +56,4 @@ const styles = StyleSheet.create({
 |style | StyleProp
 
 ## ToDo
-Documentation
-Use Date class (Remove moment package)
-Events
+- Documentation
