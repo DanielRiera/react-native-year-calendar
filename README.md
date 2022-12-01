@@ -1,5 +1,5 @@
 # React Native Year Calendar
-[![npm](https://img.shields.io/npm/l/react-native-year-calendar.svg)](https://npmjs.com/package/react-native-year-calendar) [![npm](https://img.shields.io/npm/v/react-native-year-calendar.svg)](https://npmjs.com/package/react-native-year-calendar) [![npm](https://img.shields.io/npm/dm/react-native-year-calendar.svg)](https://npmjs.com/package/react-native-year-calendar) [![Twitter](https://img.shields.io/badge/Twitter-Go%20to%20twitter-blue)](https://twitter.com/DaniRieraNet)
+[![npm](https://img.shields.io/npm/l/react-native-year-calendar.svg)](https://npmjs.com/package/react-native-year-calendar) [![npm](https://img.shields.io/npm/v/react-native-year-calendar.svg)](https://npmjs.com/package/react-native-year-calendar) [![npm](https://img.shields.io/npm/dm/react-native-year-calendar.svg)](https://npmjs.com/package/react-native-year-calendar) ![Twitter Follow](https://img.shields.io/twitter/follow/danirieranet?style=social)
 
 
 
