@@ -27,7 +27,7 @@ const Calendar = (props: CalendarProps) => {
     const {
         year = moment().year(),
         events = [],
-        months = [1,2,3,4,5,6,7,8,9,10,11,12],
+        months = [0,1,2,3,4,5,6,7,8,9,10,11],
         style = {},
         clickDay = false
     } = props;
@@ -46,6 +46,8 @@ export default Calendar;
 
 const styles = StyleSheet.create({
   container: {
-
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    alignItems: 'flex-start'
   }
 })
