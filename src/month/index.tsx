@@ -1,8 +1,8 @@
 import moment from 'moment';
 import * as React from 'react';
 import { Text, View, StyleSheet, StyleProp, ViewStyle } from 'react-native';
-import Day from 'src/day';
-import { firstDayMonth, intToArray } from 'src/utils';
+import Day from '../day';
+import { firstDayMonth, intToArray } from '../utils';
 
 interface EventC {
     id: number,

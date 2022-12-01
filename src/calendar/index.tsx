@@ -5,7 +5,7 @@
   import moment from 'moment';
  import React from 'react';
  import { View, Text, StyleSheet, StyleProp, ViewStyle } from 'react-native';
- import Month from 'src/month';
+ import Month from '../month';
 //  const { width } = Dimensions.get('screen');
  
 interface EventC {
