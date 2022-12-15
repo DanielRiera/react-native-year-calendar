@@ -21,17 +21,11 @@ import { Calendar } from 'react-native-year-calendar';
 
 export default function App() {
   return (
-    <ScrollView style={styles.container}>
+    <ScrollView style={{flex:1}}>
       <Calendar clickDay={(day) => { console.log("Press day", day)}} events={[]} />
     </ScrollView>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  }
-});
 
 `````
 

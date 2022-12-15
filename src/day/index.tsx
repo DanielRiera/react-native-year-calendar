@@ -17,7 +17,7 @@ const Day = (props: DayProps) => {
     <TouchableOpacity onPress={() => { props?.clickDay ? props?.clickDay({
       current: props.date,
       events: props.events
-    }) : false}} style={styles.day}>
+    }) : false}} style={[styles.day, (props.date.getDay() == 5 || props.date.getDay() == 6) ? {color:'#CCC'} : false}>
       <Text style={props?.styleText}>{props.date.getDate()}</Text>
       <CalendarEvent events={props.events} />
     </TouchableOpacity>
