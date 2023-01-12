@@ -5,7 +5,9 @@ const intToArray = (num: number) => {
 const firstDayMonth = (instance: any) => {
     let dayWeek = instance.getDay();
         if(dayWeek == 0) {
-            dayWeek = 7;
+            dayWeek = 6;
+        }else{
+            dayWeek--;
         }
 
         return dayWeek
