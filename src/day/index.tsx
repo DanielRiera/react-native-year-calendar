@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Text, View, StyleSheet, StyleProp, ViewStyle, Dimensions, TouchableOpacity } from 'react-native';
+import { Text, StyleSheet, StyleProp, ViewStyle, Dimensions, TouchableOpacity } from 'react-native';
 import { EventC } from '../interfaces';
 import CalendarEvent from '../event';
 const { width } = Dimensions.get('screen');
@@ -17,7 +17,7 @@ const Day = (props: DayProps) => {
     <TouchableOpacity onPress={() => { props?.clickDay ? props?.clickDay({
       current: props.date,
       events: props.events
-    }) : false}} style={[styles.day, (props.date.getDay() == 5 || props.date.getDay() == 6) ? {color:'#CCC'} : false}>
+    }) : false}} style={[styles.day, (props.date.getDay() == 5 || props.date.getDay() == 6) ? {color:'#CCC'} : {}]}>
       <Text style={props?.styleText}>{props.date.getDate()}</Text>
       <CalendarEvent events={props.events} />
     </TouchableOpacity>
