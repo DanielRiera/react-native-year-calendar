@@ -1,6 +1,6 @@
 {
     "name": "react-native-year-calendar",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "description": "A year calendar component for React Native",
     "main": "index.ts",
     "scripts": {
