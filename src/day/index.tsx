@@ -29,7 +29,7 @@ export default Day;
 const styles = StyleSheet.create({
   day: {
     width: width / 15,
-    padding:5,
+    padding:2,
     alignItems:'center'
   }
 });
