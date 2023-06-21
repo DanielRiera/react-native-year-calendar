@@ -33,11 +33,14 @@ export default function App() {
 
 | Param  | Description  | Default  | Required  |
 |---|---|---|---|
-| events  | Event array  | []  | Y |
+| events  | Event Object index by date (YYYY-MM-DD)  | []  | Y |
 | year   | Year to show on calendar  | Current  | N  |
 | months  | Array of months  | [0....11]  | N  |
 | style  | Style for all calendar  | {}  |  N |
-| clickDay  | Function fired when click on day | false  | N |
+| clickDay  | Function fired when click on day, with params (date, events) | false  | N |
+| monthsNames | Array of Names for Month | ['January', 'February', ....]  | N | 
+| monthsShortNames | Array of Short Name for Month | ['Jan', 'Feb', ....]  | N |
+| numColumns  | Number of columns for calendar  | 1 | N
 
 ## Events Object
 
@@ -46,8 +49,29 @@ export default function App() {
 | id | number
 | key | string
 | color | string
-|data | any
-|style | StyleProp
+| data | any
+| style | StyleProp
 
-## ToDo
-- Documentation
+## Event Object Example
+
+A example of event object:
+
+`````json
+{
+  '2023-01-01': [
+    {
+      color: 'red',
+      id: 1,
+      data: {...}
+    }
+  ],
+  '2023-01-10': [
+    {
+      color: 'blue',
+      id: 2,
+      data: {...}
+    }
+  ]
+}
+
+`````

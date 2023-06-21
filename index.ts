@@ -1,4 +1,3 @@
-import Calendar from "./src/calendar";
-import Month from "./src/month";
+import Calendar from "./src/Calendar";
 
-export {Calendar, Month}
+export {Calendar}
