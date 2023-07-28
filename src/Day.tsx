@@ -5,9 +5,9 @@ import CalendarEvent from './CalendarEvent'
 import { formatDate } from './Utils';
 
 const Day = ({item, events, month, year, clickDay}) => {
-  const d = new Date(year, month, item);
+  const d = new Date(year, month, item + 1);
   return (
-    <TouchableOpacity disabled={item == -1} onPress={() => clickDay(d, typeof events[formatDate(d)] != 'undefined' ? events[formatDate(d)] : [])} style={{flex:1, alignItems:'center', marginBottom:5}}>
+    <TouchableOpacity disabled={item == -1} onPress={() => clickDay(d, typeof events[formatDate(d)] != 'undefined' ? events[formatDate(d)] : [])} style={{flex:1, alignItems:'center', marginBottom:5, height: 25}}>
       {
         item != -1 ?
         <>

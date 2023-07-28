@@ -14,7 +14,7 @@ const Month = ({item, year, data, events, clickDay}) => {
         ListHeaderComponent={<HeaderCalendar title={data.monthsNames[item]} />}
         numColumns={7}
         scrollEnabled={false}
-        style={{flexGrow: 7}}
+        style={{flexGrow: 7, margin:5}}
         data={Array.from(Array(daysBefore), (_, i) => -1).concat(Array.from(Array(daysOfMonth).keys())).concat(Array.from(Array(daysAfeter), (_, i) => -1))}
         renderItem={(props) => <Day events={events} year={year} month={item} clickDay={clickDay} {...props} />}
     />
